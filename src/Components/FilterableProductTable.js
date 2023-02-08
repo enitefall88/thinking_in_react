@@ -1,13 +1,12 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import ProductCategoryRow from "./ProductCategoryRow";
 import ProductTable from "./ProductTable";
-import ProductRow from "./ProductRow";
 
-function FilterableProductTable() {
+
+function FilterableProductTable({products}) {
   return <div>
-  <SearchBar/>
-  <ProductTable/>
+    <SearchBar/>
+    <ProductTable products={products}/>
   </div>
 }
 
