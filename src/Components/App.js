@@ -10,6 +10,7 @@ const PRODUCTS = [
   {category: "Vegetables", price: "$1", stocked: true, name: "Peas"}
 ];
 function App() {
+
   return (
     <div className="App">
     <FilterableProductTable products={PRODUCTS}
