@@ -5,12 +5,9 @@ export default function ProductRow({product}) {
       {product.name}
     </span>
 
-  return <div>
-<tr>
+  return <tr>
       <td>{name}</td>
       <td>{product.price}</td>
     </tr>
-
-  </div>
 }
 

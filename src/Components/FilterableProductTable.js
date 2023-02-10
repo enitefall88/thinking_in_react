@@ -4,22 +4,21 @@ import ProductTable from "./ProductTable";
 
 
 function FilterableProductTable({products}) {
-  let [searchName, setSearchName] = useState("")
-  let [productsInStock, setShowProductsInStock] = useState(products)
+  let [filterText, setFilterText] = useState("")
+  let [productsInStock, setShowProductsInStock] = useState(false)
 
-  function showProductsInStock() {
-    setShowProductsInStock(products.filter(product =>
-      product.stocked === true
-    ))
 
-  }
   return <div>
     <SearchBar
-    searchName={searchName}
-    setSearchName={setSearchName}
-    showProductsInStock={showProductsInStock}
+    filterText={filterText}
+    setFilterText={setFilterText}
+    showProductsInStock={setShowProductsInStock}
+    productsInStock={productsInStock}
     />
-    <ProductTable products={productsInStock}/>
+    <ProductTable products={products}
+    filterText={filterText}
+    productsInStock={productsInStock}
+    />
   </div>
 }
 

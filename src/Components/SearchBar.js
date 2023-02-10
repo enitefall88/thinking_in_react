@@ -1,13 +1,14 @@
 import React from "react";
-export  default function SearchBar({setSearchName, searchName, showProductsInStock}) {
+export  default function SearchBar({setFilterText, filterText, showProductsInStock}) {
 
   return  <form>
     <input type="text" placeholder="Search here..."
-    onInput={() => setSearchName(searchName)}
+    value={filterText}
+    onChange={(event) => setFilterText(event.target.value)}
     />
     <label>
       <input type="checkbox" className="rounded text-pink-500"
-      onChange={showProductsInStock}
+      onChange={(event) => {showProductsInStock(event.target.checked)}}
       />
       {" "}
       Only show products in stock
